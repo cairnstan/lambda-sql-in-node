@@ -23,7 +23,7 @@ function initializeDB(){
       'state varchar(3) NOT NULL,' +
       'zip_code varchar(5) NOT NULL);'
     );
-  );
+  
 
       query.on('end', function(){
         console.log('Successfully ensured schema exists');

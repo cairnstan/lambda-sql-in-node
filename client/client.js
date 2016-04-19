@@ -15,14 +15,17 @@ app.controller('PersonController', ['$http', function($http){
         console.log('this: ', this);
         console.log('person: ', person);
         console.log(serverResponse);
+        person.getPeople();
       });
 
   };
   person.getPeople = function() {
 
   $http.get('/people').then(function(response){
-    person.people = request.data;
+    person.people = response.data;
     console.log(response);
   })
+
 }
+  person.getPeople();
 }]);

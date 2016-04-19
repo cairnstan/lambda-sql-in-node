@@ -11,7 +11,7 @@ app.use(express.static('server/public'));
 app.use(bodyParser.json());
 app.use('/', index);
 
-connection.initialize();
+connection.initializeDB();
 
 var server = app.listen(port, function() {
   console.log('Listening for requests on port:', server.address().port);
