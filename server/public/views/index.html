@@ -10,11 +10,29 @@
     <div ng-controller="PersonController as person">
       <label>Name:</label>
       <input type="text" ng-model="person.name" />
-
+      {{person.name}}
       <label>Address:</label>
       <input type="text" ng-model="person.address" />
-
+      {{person.address}}
+      <label>City: </label>
+      <input type="text" ng-model="person.city" />
+      {{person.city}}
+      <label>State: </label>
+      <input type="text" ng-model="person.state" />
+      {{person.state}}
+      <label>Zip Code: </label>
+      <input type="text" ng-model="person.zip_code" />
+      {{person.zip_code}}
       <button ng-click="person.sendData()">Submit!</button>
+      <div ng-repeat="user in person.people">
+        <p>user.name</p>
+        <p>user.address</p>
+        <p>user.city</p>
+        <p>user.state</p>
+        <p>user.zip_code</p>
+      </div>
+
     </div>
+
   </body>
 </html>
